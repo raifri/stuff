@@ -6,7 +6,7 @@ import bs4 as bs
 
 dryscrape.start_xvfb()
 sess = dryscrape.Session()
-sess.visit('https://192.168.124.32/#hId-pgDevInfo')
+sess.visit('https://HP093A74/#hId-pgDevInfo')
 source = sess.body()
 soup = bs.BeautifulSoup(source,'lxml')
 print ("Soup:", soup)

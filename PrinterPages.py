@@ -8,11 +8,16 @@ dryscrape.start_xvfb()
 sess = dryscrape.Session()
 sess.visit('https://HP093A74/#hId-pgDevInfo')
 source = sess.body()
+print ("Source:", source)
+print ()
+# soup = bs.BeautifulSoup(source,'lxml')
 soup = bs.BeautifulSoup(source,'lxml')
 print ("Soup:", soup)
-test = soup.find('p', class_='jstest')
-print(test)
+print ()
+# test = soup.find('p', class_='jstest')
 # print(test.text)
+test = soup.find('div.pgm-overall-container')
+print(test)
 
 # import sys
 # from PyQt4.QtGui import QApplication

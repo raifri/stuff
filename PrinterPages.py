@@ -1,6 +1,19 @@
 #
 # get and archive the number of pages from my printer in a csv file
 #
+
+#try with selenium
+# from selenium import webdriver
+# driver = webdriver.PhantomJS()
+# driver.get('https://HP093A74/#hId-pgDevInfo')
+# p_element = driver.find_element_by_id(id_='intro-text')
+# print(p_element.text)
+# pages = driver.find_element_by_xpath('/html/body/div[1]/div[5]/div[2]/div[2]/form/div[1]/div[4]/div/table/tbody/tr[6]/td[2]')
+# print ("pages: ", pages)
+
+
+
+# try with dryscrape
 import dryscrape
 import bs4 as bs
 
@@ -19,6 +32,7 @@ print ()
 test = soup.find('div.pgm-overall-container')
 print(test)
 
+# try with PyQt4
 # import sys
 # from PyQt4.QtGui import QApplication
 # from PyQt4.QtCore import QUrl
